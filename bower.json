@@ -1,0 +1,22 @@
+{
+  "name": "Delfin-Test",
+  "version": "0.1.1",
+  "homepage": "https://github.com/natymaia/Delfin-Test",
+  "description": "Ejercicio del curso de Testing realizado en el NAC Saladas, Corrientes, con el lenguaje de JavaScript.",
+  "main": "index.html",
+  "authors": [
+    "Rocio Natalia Luque <saladas@nac.gob.ar>"
+  ],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qunit": "~1.16.0"
+  }
+}
