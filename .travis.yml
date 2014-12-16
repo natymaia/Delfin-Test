@@ -1,1 +1,10 @@
-.travis.yml
+language: node_js
+node_js:
+  - "0.10"
+
+before_script:
+  - sudo npm install -g grunt grunt-cli bower
+
+script: 
+  - bower install
+  - grunt test --verbose --force
