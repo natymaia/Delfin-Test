@@ -1,13 +1,31 @@
-grunt.loadNpmTasks('grunt-contrib-qunit');
-gruntConfig.qunit = {
-    src: ['index.html']
-};
-grunt.registerTask('test', 'qunit:src');
-grunt.registerTask('travis', ['lint', 'test']);
-grunt.loadNpmTasks('grunt-qunit-junit');
-gruntConfig.qunit_junit = {
-    options: {
-        dest: 'output/testresults'
+module.exports = function(grunt) {
+  'use strict';
+
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          livereload: true,
+          port: 3000
+          //base: ''
+        }
+      }
+    },
+    qunit: {
+      files: ['index.html'],
+      all: {
+        options: {
+          urls: [
+          'http://localhost:<%= connect.server.options.port %>/index.html'
+          ]
+        }
+      }
     }
-};
-grunt.registerTask('test', ['qunit_junit', 'qunit:src']);
+  });
+  grunt.registerTask('default', ['connect:server', 'qunit']);
+  grunt.registerTask('travis', ['connect:server', 'qunit']);
+}
