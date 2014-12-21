@@ -8,4 +8,4 @@ before_script:
   - bower install
 
 script:
-  - grunt test --verbose --force
+  - grunt travis --verbose --force
