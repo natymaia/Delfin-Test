@@ -4,5 +4,5 @@
 // espera: nombre, comportamiento
 QUnit.test("can say hello", function(assert){
 	assert.equal(AnimalMarino.Delfin.sayHello(), "iiiiiiigggggghhhhh", "Delfin puede saludar!")
-
 });
+QUnit.start();

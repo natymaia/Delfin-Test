@@ -1,0 +1,27 @@
+{
+  "name": "Delfin-Test",
+  "version": "0.1.0",
+  "description": "Delfin-Test ===========",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-cli": "~0.1.6",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-connect": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "bower": "~1.3.12"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manufarfaro/Delfin-Test.git"
+  },
+  "author": "Natalia Luque <natymaia@yahoo.com.ar>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manufarfaro/Delfin-Test/issues"
+  }
+}
